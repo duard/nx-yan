@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "projects": {
+    "py-hub-api": {
+      "root": "apps/py-hub-api",
+      "sourceRoot": "apps/py-hub-api/src",
+      "projectType": "application",
+      "prefix": "py-hub-api",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/py-hub-api",
+            "main": "apps/py-hub-api/src/main.ts",
+            "tsConfig": "apps/py-hub-api/tsconfig.app.json",
+            "assets": [
+              "apps/py-hub-api/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/py-hub-api/src/environments/environment.ts",
+                  "with": "apps/py-hub-api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "py-hub-api:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/py-hub-api/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/py-hub-api"
+          ],
+          "options": {
+            "jestConfig": "apps/py-hub-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/nest"
+  },
+  "defaultProject": "py-hub-api"
+}
