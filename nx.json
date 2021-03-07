@@ -20,5 +20,9 @@
       }
     }
   },
-  "projects": { "py-hub-api": { "tags": [] } }
+  "projects": {
+    "py-hub-api": { "tags": [] },
+    "api-shared": { "tags": [] },
+    "api-database": { "tags": [] }
+  }
 }

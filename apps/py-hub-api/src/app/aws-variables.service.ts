@@ -1,6 +1,8 @@
 import * as AWS from 'aws-sdk';
 
+let tokenCount = 1;
 export class AwsVariablesService {
+
   static async getVARs() {
     console.log(1, 'iniciando...');
     const params = await this.getData();
@@ -13,7 +15,7 @@ export class AwsVariablesService {
 
     const { SSM_PATH, NODE_ENV } = process.env;
     const prefix = `${SSM_PATH}/${NODE_ENV}/`;
-    console.log('::: SSM: Loading environment variables :::', 1);
+    console.log('::: SSM: Loading environment variables :::', tokenCount++);
 
     const params = await ssm
       .getParametersByPath({ Path: prefix, WithDecryption: true, NextToken })

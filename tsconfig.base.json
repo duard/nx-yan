@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-yandeh/api-shared": ["libs/api-shared/src/index.ts"],
+      "@nx-yandeh/api-database": ["libs/api-database/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
