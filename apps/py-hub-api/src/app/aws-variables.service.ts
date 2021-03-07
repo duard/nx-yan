@@ -1,7 +1,4 @@
 import * as AWS from 'aws-sdk';
-import { config } from 'dotenv';
-
-config();
 
 export class AwsVariablesService {
   static async getVARs() {
@@ -25,18 +22,20 @@ export class AwsVariablesService {
     // console.log(params);
     if (params.Parameters) bag = [...bag, ...params.Parameters];
     if (params.NextToken) return await this.getData(bag, params.NextToken);
-    // return this.getData();
-    // Return new promise
-    return new Promise(function (resolve) {
+
+    const parameters = new Promise((resolve) => {
       const parametersBag = {};
 
       for (const environment of bag) {
         parametersBag[environment.Name.replace(prefix, '')] = environment.Value;
       }
 
-      // console.log(`::: SSM: Loading environment variables :::`, bag);
+      console.log(`::: SSM: Loading environment variables :::`, 'resolvido');
 
-      resolve(Promise.resolve(parametersBag));
+      // resolve(Promise.resolve(parametersBag));
+      resolve(parametersBag);
     });
+
+    return parameters;
   }
 }
