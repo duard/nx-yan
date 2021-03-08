@@ -16,5 +16,5 @@ export const environment = {
 
   API_PORT: 3333,
   API_HOST: 'localhost',
-  JWT_SECRET: process.env.SECRET
+  JWT_SECRET: process.env.SECRET,
 };

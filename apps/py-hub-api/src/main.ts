@@ -6,7 +6,6 @@ import * as dotenv from 'dotenv';
 import { AppModule } from './app/app.module';
 import { AwsVariablesService } from './app/aws-variables.service';
 
-
 dotenv.config();
 
 async function bootstrap() {

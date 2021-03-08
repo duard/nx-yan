@@ -2,7 +2,6 @@ import * as AWS from 'aws-sdk';
 
 let tokenCount = 1;
 export class AwsVariablesService {
-
   static async getVARs() {
     console.log(1, 'iniciando...');
     const params = await this.getData();
