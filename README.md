@@ -1,7 +1,7 @@
 # Basic Workspace for New Projects
 
-## teste
-
+## deep graph
+![Gráfico de dependencias](nx-deep-graph.png).
 #### rodando os projetos
 
 ```
