@@ -27,8 +27,8 @@
               "inspect": false,
               "fileReplacements": [
                 {
-                  "replace": "apps/py-hub-api/src/environments/environment.ts",
-                  "with": "apps/py-hub-api/src/environments/environment.prod.ts"
+                  "replace": "libs/shared/environments/src/lib/py-hub-api/environment.ts",
+                  "with": "libs/shared/environments/src/lib/py-hub-api/environment.prod.ts"
                 }
               ]
             }
@@ -105,6 +105,36 @@
           ],
           "options": {
             "jestConfig": "libs/api-database/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-assets": {
+      "projectType": "library",
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src"
+    },
+    "shared-environments": {
+      "root": "libs/shared/environments",
+      "sourceRoot": "libs/shared/environments/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/environments/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/environments"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/environments/jest.config.js",
             "passWithNoTests": true
           }
         }

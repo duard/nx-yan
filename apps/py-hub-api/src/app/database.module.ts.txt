@@ -2,9 +2,8 @@ import 'reflect-metadata';
 
 import { Logger as log, Module } from '@nestjs/common';
 import { cyan, white } from '@nx-yandeh/api-shared';
+import { environment } from '@nx-yandeh/shared/environments';
 import { Db, Logger, MongoClient } from 'mongodb';
-
-import { environment } from '../environments/environment';
 
 @Module({
   providers: [

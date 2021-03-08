@@ -16,8 +16,14 @@
     "baseUrl": ".",
     "paths": {
       "@nx-yandeh/api-shared": ["libs/api-shared/src/index.ts"],
-      "@nx-yandeh/api-database": ["libs/api-database/src/index.ts"]
+      "@nx-yandeh/api-database": ["libs/api-database/src/index.ts"],
+      "@nx-yandeh/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@nx-yandeh/shared/environments": [
+        "libs/shared/environments/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp", "**/*.spec.ts"],
+  "include": ["**/*.ts", "./libs/*/src/**/*", "./apps/*/src/**/*"],
+  "types": ["node", "cypress", "jest"]
 }

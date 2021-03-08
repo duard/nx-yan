@@ -23,6 +23,8 @@
   "projects": {
     "py-hub-api": { "tags": [] },
     "api-shared": { "tags": [] },
-    "api-database": { "tags": [] }
+    "api-database": { "tags": [] },
+    "shared-assets": { "tags": ["scope:shared", "type:assets"] },
+    "shared-environments": { "tags": ["scope:shared", "type:environments"] }
   }
 }
