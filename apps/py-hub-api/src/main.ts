@@ -19,7 +19,7 @@ async function bootstrap() {
   // console.log('PORTA', Number(process.env.PORT) || 3333);
   const port = Number(process.env.PORT) || 3333;
   await app.listen(port, () => {
-    Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
+    Logger.log( process.env.NODE_ENV, 'Listening at http://localhost:' + port + '/' + globalPrefix + ' => ');
   });
 }
 
