@@ -1,0 +1,263 @@
+{
+  "breadcrumbs.enabled": false,
+  "window.menuBarVisibility": "toggle",
+  "editor.multiCursorModifier": "alt",
+  "editor.formatOnPaste": false,
+  // "editor.wordWrap": "bounded",
+  "workbench.editor.enablePreview": false,
+  // "editor.letterSpacing": 0.5,
+  "editor.cursorWidth": 3,
+  "editor.glyphMargin": true,
+  "terminal.integrated.fontWeight": "200",
+  "terminal.integrated.macOptionIsMeta": true,
+  "terminal.integrated.fontWeightBold": "700",
+  "terminal.integrated.lineHeight": 1.6,
+  "editor.trimAutoWhitespace": true,
+  "editor.wordWrapColumn": 1000,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.renderLineHighlight": "all",
+  "editor.renderIndentGuides": true,
+  "workbench.editor.showIcons": true,
+  "editor.selectionHighlight": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabCompletion": "on",
+  "bracketPairColorizer.forceIterationColorCycle": true,
+  "editor.fontFamily": "'Fira Code', Firacode, 'Cascadia Code', Operator Mono,'Dank Mono', Fira Code,  Consolas",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.fontWeight": "300",
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontFamily": "Dank Mono",
+  "terminal.integrated.scrollback": 100000,
+  "editor.rulers": [
+    120
+  ],
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.rendererType": "dom",
+  "debug.console.fontSize": 14,
+  "terminal.integrated.fontSize": 13,
+  "extensions.ignoreRecommendations": false,
+  "workbench.fontAliasing": "antialiased",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "python.linting.flake8Enabled": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terraform.languageServer": {
+    "external": true,
+    "args": [
+      "serve"
+    ]
+  },
+  "material-icon-theme.showWelcomeMessage": false,
+  "files.autoSave": "off",
+  "yaml.schemas": {
+    "file:///Users/thiagofranca/.vscode/extensions/atlassian.atlascode-2.4.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js", //class keyword
+          "storage.type.this.js",
+          "storage.type.method.js",
+          "entity.name.type.method"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Keyword, Storage",
+        "scope": [
+          "Keyword",
+          "Storage"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#4a96f8"
+        }
+      },
+      {
+        "name": "Keyword Control",
+        "scope": [
+          "keyword.control"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "entity.other.attribute-name",
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#78dce8"
+        }
+      },
+      {
+        "name": "entity.name.method.js",
+        "scope": [
+          "entity.name.method.js"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#82AAFF"
+        }
+      },
+      {
+        "name": "Language methods",
+        "scope": [
+          "variable.language"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#FF5370"
+        }
+      },
+      {
+        "name": "HTML Attributes",
+        "scope": [
+          "text.html.basic entity.other.attribute-name.html",
+          "text.html.basic entity.other.attribute-name"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#FFCB6B"
+        }
+      },
+      {
+        "name": "Decorators",
+        "scope": [
+          "tag.decorator.js entity.name.tag.js",
+          "tag.decorator.js punctuation.definition.tag.js"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#82AAFF"
+        }
+      },
+      {
+        "name": "ES7 Bind Operator",
+        "scope": [
+          "source.js constant.other.object.key.js string.unquoted.label.js"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#FF5370"
+        }
+      },
+      {
+        "name": "Markup - Italic",
+        "scope": [
+          "markup.italic"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#f07178"
+        }
+      },
+      {
+        "name": "Markup - Bold-Italic",
+        "scope": [
+          "markup.bold markup.italic",
+          "markup.italic markup.bold",
+          "markup.quote markup.bold",
+          "markup.bold markup.italic string",
+          "markup.italic markup.bold string",
+          "markup.quote markup.bold string"
+        ],
+        "settings": {
+          "fontStyle": "bold",
+          //"foreground": "#f07178"
+        }
+      },
+      {
+        "name": "Markup - Quote",
+        "scope": [
+          "markup.quote"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": ""
+        }
+      },
+      {
+        "scope": "variable.other",
+        "settings": {
+          //"foreground": "#82fbff"
+        }
+      },
+      {
+        "scope": "entity.name.function",
+        "settings": {
+          //"foreground": "#dfd9a8"
+        }
+      },
+      {
+        "scope": "support.function",
+        "settings": {
+          "fontStyle": "italic",
+          //"foreground": "#dfd9a8"
+        }
+      },
+      {
+        "scope": "string",
+        "settings": {
+          //"foreground": "#CE9178"
+        }
+      }
+    ]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editor.showTabs": true,
+  "markdown.preview.fontSize": 16,
+  "dart.flutterDaemonLogFile": null,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "liveshare.authenticationProvider": "GitHub",
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "City Lights",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.colorCustomizations": {
+    "terminal.foreground": "#839496",
+    "terminal.background": "#121a21",
+    "activityBar.background": "#12303b",
+    "activityBar.activeBorder": "#06b9a5",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#5482af99",
+    "activityBarBadge.background": "#06b9a5",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#12303b",
+    "titleBar.inactiveBackground": "#f9e64f99",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99",
+    "statusBar.background": "#12303b",
+    "statusBarItem.hoverBackground": "#12303b",
+    "statusBar.foreground": "#15202b"
+  },
+}
