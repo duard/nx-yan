@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/api-database',
     '<rootDir>/libs/shared/assets',
     '<rootDir>/libs/shared/environments',
+    '<rootDir>/libs/api-users',
   ],
 };

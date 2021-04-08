@@ -11,7 +11,7 @@ import { Db, Logger, MongoClient } from 'mongodb';
       provide: 'DATABASE_CONNECTION',
       useFactory: async (): Promise<Db> => {
         Logger.setLevel(
-          process.env.NODE_ENV === 'development' ? 'error' : 'error'
+          process.env.NODE_ENV === 'development' ? 'error' : 'info'
         );
 
         const uri = environment.AWS_VARS.MONGO_URI;

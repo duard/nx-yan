@@ -20,7 +20,8 @@
       "@nx-yandeh/shared/assets": ["libs/shared/assets/src/index.ts"],
       "@nx-yandeh/shared/environments": [
         "libs/shared/environments/src/index.ts"
-      ]
+      ],
+      "@nx-yandeh/api-users": ["libs/api-users/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", "**/*.spec.ts"],

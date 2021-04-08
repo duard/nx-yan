@@ -9,12 +9,16 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/py-hub-api",
             "main": "apps/py-hub-api/src/main.ts",
             "tsConfig": "apps/py-hub-api/tsconfig.app.json",
-            "assets": ["apps/py-hub-api/src/assets"]
+            "assets": [
+              "apps/py-hub-api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -39,12 +43,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/py-hub-api/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/py-hub-api/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/py-hub-api"],
+          "outputs": [
+            "coverage/apps/py-hub-api"
+          ],
           "options": {
             "jestConfig": "apps/py-hub-api/jest.config.js",
             "passWithNoTests": true
@@ -60,12 +68,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/api-shared/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/api-shared/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/api-shared"],
+          "outputs": [
+            "coverage/libs/api-shared"
+          ],
           "options": {
             "jestConfig": "libs/api-shared/jest.config.js",
             "passWithNoTests": true
@@ -81,12 +93,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/api-database/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/api-database/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/api-database"],
+          "outputs": [
+            "coverage/libs/api-database"
+          ],
           "options": {
             "jestConfig": "libs/api-database/jest.config.js",
             "passWithNoTests": true
@@ -107,14 +123,43 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/environments/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/shared/environments/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/environments"],
+          "outputs": [
+            "coverage/libs/shared/environments"
+          ],
           "options": {
             "jestConfig": "libs/shared/environments/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-users": {
+      "root": "libs/api-users",
+      "sourceRoot": "libs/api-users/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/api-users/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/api-users"
+          ],
+          "options": {
+            "jestConfig": "libs/api-users/jest.config.js",
             "passWithNoTests": true
           }
         }
